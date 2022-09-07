@@ -25,8 +25,8 @@ for line in $(cat $FILE); do
     echo "----------------------------------"  &>> $FILE_FINAL
 done
 
-echo "Количество ВМ в облаке Майндбокса на платформе Intel Cascade Lake: $(cat $FILE_FINAL | grep "standard-v2" | wc -l)" &>> $FILE_PLATFORM
-echo "Количество ВМ в облаке Майндбокса на платформе Intel Ice Lake: $(cat $FILE_FINAL | grep "standard-v3" | wc -l)" &>> $FILE_PLATFORM
+echo "Количество ВМ в облаке на платформе Intel Cascade Lake: $(cat $FILE_FINAL | grep "standard-v2" | wc -l)" &>> $FILE_PLATFORM
+echo "Количество ВМ в облаке на платформе Intel Ice Lake: $(cat $FILE_FINAL | grep "standard-v3" | wc -l)" &>> $FILE_PLATFORM
 
 # Creating zip-archive and deleting old files
 for file in $files
